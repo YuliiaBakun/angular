@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    background-image: url(../img/sea.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+.log-form,
+.new_pass-form,
+.reset_pass,
+.upuser-form,
+.add_user {
+    width: 35%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .7);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.user-img {
+    width: 40%;
+    margin: 0 auto 20px;
+}
+.user-img img {
+    width: 100%;
+}
+.input-container {
+    margin-bottom: 10px;
+}
+.input-container label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #36d9d9;
+}
+input[type=email],
+input[type=password],
+.reset_pass input[type="text"],
+.upuser-form input[type="text"],
+.add_user input[type="text"] {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 5px;
+}
+.sbm {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+    color: #222;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.forgot a {
+    color: #36d9d9;
+}
+.title {
+    font-size: 25px;
+    color: #36d9d9;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*users table*/
+.users {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.top-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+.add-logout {
+    display: flex;
+}
+.top-header h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #222222;
+    text-align: center;
+}
+.top-header form {
+    display: flex;
+}
+.top-header input {
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+}
+.btn-search {
+    width: 35px;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+.btn-search:before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.delete-user {
+    margin-left: 15px;
+}
+.users i {
+    cursor: pointer;
+}
+.users td {
+    position: relative;
+}
+.pagination-block {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.pagination-block button,
+.add-logout button {
+    padding: 5px 20px;
+    border: none;
+    color: #fff;
+    background-color: #222222;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.add-logout button:last-child {
+    margin-right: 0;
+}
+.pagination-block button[disabled] {
+    background-color: #ccc;
+}
+.all {
+    display: none;
+}
+.show {
+    display: block;
+}
+@media screen and (max-width: 768px) {
+    .log-form, .new_pass-form, .reset_pass, .upuser-form{
+        width: 50%;
+    }
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-header form {
+        margin-bottom: 15px;
+        order: 1;
+    }
+    .top-header h1 {
+        order: 2;
+    }
+    .add-logout {
+        order: 0;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .log-form, .new_pass-form, .reset_pass, .upuser-form {
+        width: 85%;
+    }
+    thead {
+        display: none;
+    }
+    .users td {
+        display: block;
+        padding-left: 65%;
+    }
+    .users td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 7%;
+    }
+    .users tr:nth-child(odd) {
+        background-color: #8998a8;
+    }
+}
